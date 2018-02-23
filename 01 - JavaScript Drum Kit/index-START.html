@@ -58,7 +58,15 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
+//reik, kad per datakey atpazin/tu spaudziamus mygtukus
 
+//reikia isloginti koks mygtukas paspaustas
+  window.addEventListener('keydown', function (e) {
+    var audio = document.querySelector(`audio[data-key='${e.keyCode}']`);
+    
+
+    audio.play();
+  }) 
 </script>
 
 
